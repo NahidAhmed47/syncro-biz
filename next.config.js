@@ -1,4 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {assetPrefix: 'https://i.ibb.co',}
+const nextConfig = {}
 
 module.exports = nextConfig
