@@ -13,6 +13,22 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      animation: {
+        'up-down': 'upDown 5s infinite',
+      },
+      keyframes: {
+        upDown: {
+          '0%': {
+            transform: 'translateY(0)',
+          },
+          '50%': {
+            transform: 'translateY(-20px)',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+          },
+        },
+      },
     },
   },
   daisyui: {

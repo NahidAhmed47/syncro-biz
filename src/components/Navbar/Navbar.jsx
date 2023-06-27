@@ -7,7 +7,7 @@ import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 const Navbar = () => {
     return (
         <div className='w-full py-5 md:py-8 absolute top-0 z-10'>
-            <div className='max-w-[1480px] mx-auto flex items-center justify-between'>
+            <div className='max-container flex items-center justify-between'>
                 <div className='w-fit flex justify-center gap-2 items-center'> 
                     <Image src={bannerImg} alt='logo' fill={false}></Image>
                     <h1 className='text-2xl font-extrabold text-white'>Syncro<span className='text-primary'>Biz</span></h1>
