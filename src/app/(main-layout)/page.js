@@ -1,3 +1,4 @@
+import CounterBg from '@/components/CounterBg/CounterBg';
 import HomeAbout from '@/components/HomeAbout/HomeAbout';
 import HomeBanner from '@/components/HomeBanner/HomeBanner';
 import HomeService from '@/components/HomeService/HomeService';
@@ -9,6 +10,7 @@ const page = () => {
             <HomeBanner></HomeBanner>
             <HomeService></HomeService>
             <HomeAbout></HomeAbout>
+            <CounterBg></CounterBg>
             main layout page
         </div>
     );
