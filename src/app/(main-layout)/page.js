@@ -13,7 +13,6 @@ const page = () => {
             <HomeAbout></HomeAbout>
             <CounterBg></CounterBg>
             <DataAccordianHome></DataAccordianHome>
-            main layout page
         </div>
     );
 };
