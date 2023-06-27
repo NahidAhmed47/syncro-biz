@@ -10,7 +10,7 @@ import sideImg4 from '@/assests/bannerside/4.png'
 
 const HomeBanner = () => {
     return (
-        <div style={{background: 'linear-gradient(to bottom, #4b43c5, #385bd5, #2270e2, #0c84ec, #1397f3)', height: '97vh', width: '100%', position: 'relative'}}>
+        <div style={{background: 'linear-gradient(to bottom, #4b43c5, #385bd5, #2270e2, #0c84ec, #1397f3)', height: '100vh', width: '100%', position: 'relative'}}>
             <div className='w-full h-full pt-28 max-container grid lg:grid-cols-2 gap-4'>
                 <div className=' px-3 pb-14 flex flex-col justify-center space-y-3  md:space-y-7'>
                     <h1 className='text-2xl md:text-7xl font-bold text-white pr-5 '>Analysis and Manage Your Business More Easy and Safely</h1>
@@ -29,7 +29,7 @@ const HomeBanner = () => {
                     </div>
                 </div>
             </div>
-            <Image src={bannerImg} alt='img' fill={false} className='h-[128px] sm:h-[203px] lg:h-[500px] w-full  absolute bottom-0'></Image>
+            <Image src={bannerImg} alt='img' fill={false} className='h-[128px] sm:h-[203px] lg:h-[550px] w-full  absolute -bottom-1'></Image>
         </div>
     );
 };

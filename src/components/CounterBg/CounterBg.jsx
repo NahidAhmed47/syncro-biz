@@ -5,7 +5,7 @@ import CountInView from "../CountInView/CountInView";
 
 const CounterBg = () => {
   return (
-    <div className="h-[250px] w-full relative">
+    <div className="h-[300px] w-full relative">
       <div className="absolute top-0 h-full w-full ">
         <Image src={counterImg} fill={true} alt="counter-bg"></Image>
       </div>
