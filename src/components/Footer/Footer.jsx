@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <h1 className='text-2xl font-bold font-serif'>Newsletter</h1>
+                    <h1 className='text-2xl font-bold font-serif'>Latest Update</h1>
                     <div className='w-full bg-white mt-2'><div className='border border-primary w-[40%] h-0'></div></div>
                     <div className='mt-4 md:mt-8'>
                         <div className='flex gap-3 items-center justify-between'>
@@ -48,7 +48,7 @@ const Footer = () => {
                      <h1 className='text-2xl font-bold font-serif'>Get in Touch</h1>
                     <div className='w-full bg-white mt-2'><div className='border border-primary w-[40%] h-0'></div></div>
                     <div className='mt-4 md:mt-8'>
-                        <p>Restaurant, to consequat ipsum nec sagittis sem.</p>
+                        <p>Where We Are? You can find out -</p>
                         <div className='mt-3 flex flex-col gap-2'>
                             <div className='flex gap-2'>
                                 <FaSearchLocation className='w-8 h-8 text-white'></FaSearchLocation>

@@ -3,6 +3,7 @@ import DataAccordianHome from '@/components/DataAccordianHome/DataAccordianHome'
 import HomeAbout from '@/components/HomeAbout/HomeAbout';
 import HomeBanner from '@/components/HomeBanner/HomeBanner';
 import HomeService from '@/components/HomeService/HomeService';
+import WorkingProcessSection from '@/components/WorkingProcessSection/WorkingProcessSection';
 import React from 'react';
 
 const page = () => {
@@ -13,6 +14,7 @@ const page = () => {
             <HomeAbout></HomeAbout>
             <CounterBg></CounterBg>
             <DataAccordianHome></DataAccordianHome>
+            <WorkingProcessSection></WorkingProcessSection>
         </div>
     );
 };
