@@ -17,14 +17,14 @@ const OurWorkingProcess = () => {
           commodo viverra maecenas accumsan lacus vel facilisis.
         </p>
         <div className="grid md:grid-cols-2 gap-x-5 gap-y-3 w-full h-full">
-        <OurWorkingProCard title="Data Analysis"></OurWorkingProCard>
-        <OurWorkingProCard title="Data Analysis"></OurWorkingProCard>
-        <OurWorkingProCard title="Data Analysis"></OurWorkingProCard>
-        <OurWorkingProCard title="Data Analysis"></OurWorkingProCard>
-        <OurWorkingProCard title="Data Analysis"></OurWorkingProCard>
-        <OurWorkingProCard title="Data Analysis"></OurWorkingProCard>
-        <OurWorkingProCard title="Data Analysis"></OurWorkingProCard>
-        <OurWorkingProCard title="Data Analysis"></OurWorkingProCard>
+        <OurWorkingProCard title="Employee Chat"></OurWorkingProCard>
+        <OurWorkingProCard title="Analysis & Insights"></OurWorkingProCard>
+        <OurWorkingProCard title="Supplier Management"></OurWorkingProCard>
+        <OurWorkingProCard title="Sales Transactions"></OurWorkingProCard>
+        <OurWorkingProCard title="Interaction Tracking"></OurWorkingProCard>
+        <OurWorkingProCard title="Customer Info"></OurWorkingProCard>
+        <OurWorkingProCard title="Sales Performance"></OurWorkingProCard>
+        <OurWorkingProCard title="Budgeting Tools"></OurWorkingProCard>
         </div>
       </div>
       <div className="flex items-center justify-center">
