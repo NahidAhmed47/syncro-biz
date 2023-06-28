@@ -3,6 +3,26 @@ import React from 'react';
 import bannerImg from '@/assests/syncro-logo.png'
 import Link from 'next/link';
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
+import NavLink from './NavLink';
+
+const navLinks = [
+    {
+        path:'/',
+        title: 'Home'
+    },
+    {
+        path:'/services',
+        title: 'Services'
+    },
+    {
+        path:'/contract',
+        title: 'Contract'
+    },
+    {
+        path:'/about',
+        title: 'About Us'
+    },
+] 
 
 const Navbar = () => {
     return (
@@ -13,10 +33,11 @@ const Navbar = () => {
                     <h1 className='text-2xl font-extrabold text-white'>Syncro<span className='text-primary'>Biz</span></h1>
                 </div>
                 <ul className='flex items-center gap-6 text-lg text-white font-medium'>
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/services">Services</Link></li>
-                    <li><Link href="/contract">Contract</Link></li>
-                    <li><Link href="/about">About Us</Link></li>
+                    {
+                        navLinks.map(({path, title})=> <li key={path}>
+                        <NavLink exact={path === '/'} activeClassName="text-primary font-semibold" href={path}>{title}</NavLink>
+                    </li>)
+                    }
                 </ul>
                 <ButtonPrimary>Free Register</ButtonPrimary>
             </div>

@@ -6,5 +6,5 @@
     @apply max-w-[1480px] mx-auto
 }
 .section-container{
-    @apply max-w-[1320px] mx-auto my-24
+    @apply max-w-[1320px] mx-auto my-20
 }
