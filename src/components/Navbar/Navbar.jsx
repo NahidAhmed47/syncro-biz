@@ -16,7 +16,7 @@ const navLinks = [
   },
   {
     path: "/contract",
-    title: "Contract",
+    title: "Contact",
   },
   {
     path: "/about",
