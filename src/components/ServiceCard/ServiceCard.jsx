@@ -12,7 +12,7 @@ const ServiceCard = ({icon, title, description}) => {
         >
           <div className="z-10 p-5 md:p-7 space-y-2 absolute top-0 w-full h-full flex flex-col justify-center">
             <div className="flex items-center gap-3"> 
-              <div className="p-3 rounded-full bg-[#eceffa] group-hover:bg-white duration-500">
+              <div className="p-3 rounded-full bg-[#F3EFFB] group-hover:bg-white duration-500">
                 {icon}
               </div>
               <h1 className="text-neutral text-xl md:text-2xl font-semibold group-hover:text-white duration-500">{title}</h1>

@@ -1,9 +1,10 @@
+import PageBanner from '@/components/PageBanner/PageBanner';
 import React from 'react';
 
 const page = () => {
     return (
         <div>
-            this is contract page
+            <PageBanner title="Contract Us" route1="Home" route2="Contract"></PageBanner>
         </div>
     );
 };
