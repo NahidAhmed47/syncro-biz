@@ -4,6 +4,7 @@ import HomeAbout from '@/components/HomeAbout/HomeAbout';
 import HomeBanner from '@/components/HomeBanner/HomeBanner';
 import HomeService from '@/components/HomeService/HomeService';
 import OurWorkingProcess from '@/components/OurWorkingProcess/OurWorkingProcess';
+import Subscribe from '@/components/Subscribe/Subscribe';
 import WorkingProcessSection from '@/components/WorkingProcessSection/WorkingProcessSection';
 import React from 'react';
 
@@ -12,11 +13,12 @@ const page = () => {
         <div>
             <HomeBanner></HomeBanner>
             <HomeService></HomeService>
-            <HomeAbout></HomeAbout>
+            <OurWorkingProcess></OurWorkingProcess>
             <CounterBg></CounterBg>
             <DataAccordianHome></DataAccordianHome>
             <WorkingProcessSection></WorkingProcessSection>
-            <OurWorkingProcess></OurWorkingProcess>
+            <HomeAbout></HomeAbout>
+            <Subscribe></Subscribe>
         </div>
     );
 };

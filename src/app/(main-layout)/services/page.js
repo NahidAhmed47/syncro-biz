@@ -1,6 +1,7 @@
 import OurWorkingProcess from '@/components/OurWorkingProcess/OurWorkingProcess';
 import PageBanner from '@/components/PageBanner/PageBanner';
 import ServiceCard from '@/components/ServiceCard/ServiceCard';
+import Subscribe from '@/components/Subscribe/Subscribe';
 import React from 'react';
 import { FaDatabase, FaCogs, FaCubes, FaDollarSign, FaHandshake, FaRegChartBar } from "react-icons/fa";
 
@@ -20,6 +21,7 @@ const page = () => {
                 </div>
             </div>
             <OurWorkingProcess></OurWorkingProcess>
+            <Subscribe></Subscribe>
         </div>
     );
 };
