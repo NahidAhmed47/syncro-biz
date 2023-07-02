@@ -13,7 +13,7 @@ const HomeBanner = () => {
     return (
         <div style={{background: 'linear-gradient(to bottom, #4b43c5, #385bd5, #2270e2, #0c84ec, #1397f3)', height: '100vh', width: '100%', position: 'relative'}}>
             <div className='w-full h-full pt-28 max-container grid lg:grid-cols-2 gap-4'>
-                <div className=' px-3 pb-14 flex flex-col justify-center space-y-3  md:space-y-7'>
+                <div className=' px-3 pb-14 flex flex-col justify-center items-center sm:items-start text-center sm:text-start space-y-3  md:space-y-7'>
                     <h1 className='text-2xl md:text-7xl font-bold text-white pr-5 '>Analysis and Manage Your Business More Easy and Safely</h1>
                     <p className='text-sm md:text-base font-normal'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda nesciunt tempora qui hic explicabo vitae a aliquam laboriosam suscipit beatae. Assumenda nesciunt tempora qui hic explicabo vitae a aliquam laboriosam suscipit beatae.</p>
                     <div className='flex gap-5 items-center'>
