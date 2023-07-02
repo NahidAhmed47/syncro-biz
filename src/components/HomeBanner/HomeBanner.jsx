@@ -7,6 +7,7 @@ import sideImg1 from '@/assests/bannerside/1.png'
 import sideImg2 from '@/assests/bannerside/2.png'
 import sideImg3 from '@/assests/bannerside/3.png'
 import sideImg4 from '@/assests/bannerside/4.png'
+import smallBannerImg from '@/assests/data-service.png'
 
 const HomeBanner = () => {
     return (
@@ -20,8 +21,11 @@ const HomeBanner = () => {
                         <Link href="/contract"><ButtonPrimary>Contract Us</ButtonPrimary></Link>
                     </div>
                 </div>
-                <div className=' h-full w-full hidden lg:inline-block'>
-                    <div className='relative h-full w-full z-10 animate-up-down' >
+                <div className=' h-full w-full z-50'>
+                    <div className='z-50 w-full h-full flex items-center justify-center'>
+                    <Image src={smallBannerImg} alt='smallBannerImg' fill={false} className='z-50'></Image>
+                    </div>
+                    <div className='relative h-full w-full z-10 animate-up-down hidden 2xl:inline-block' >
                         <Image src={sideImg1} fill={false} alt='sideimg1' className='absolute -right-24 top-48'></Image>
                         <Image src={sideImg2} fill={false} alt='sideimg2' className='absolute bottom-24 left-20'></Image>
                         <Image src={sideImg3} fill={false} alt='sideimg3' className='absolute left-6 top-48'></Image>
