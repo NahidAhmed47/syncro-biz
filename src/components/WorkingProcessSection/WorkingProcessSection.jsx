@@ -9,7 +9,7 @@ const WorkingProcessSection = () => {
     return (
         <div className='section-container pb-24'>
             <SectionHeader subTitle="Your working process" title="How Do You Work"></SectionHeader>
-            <div className='grid md:grid-cols-3 gap-5 md:gap-8 mt-8'>
+            <div className='grid md:grid-cols-3 gap-y-36 md:gap-y-auto gap-5 md:gap-8 mt-8'>
                 <div className='relative group'>
                     <Image src={img1} alt="img1" fill={false}></Image>
                     <div className='absolute -bottom-24 h-[120px] w-2/3 group-hover:w-full left-[16%] group-hover:left-0  bg-white p-4 text-center flex flex-col justify-center items-center group-hover:bg-primary duration-500' style={{boxShadow: '0 5px 40px 0 rgba(0, 0, 0, 0.11)'}}>

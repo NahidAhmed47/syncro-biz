@@ -6,8 +6,8 @@ import img from "@/assests/tab-solution.png";
 
 const DataAccordianCard = ({ active, index, card }) => {
   return (
-    <div className={`flex mt-12 md:mt-16 gap-4 ${active != index && "hidden"}`}>
-      <div className=" flex-1 space-y-4 flex flex-col justify-center items-start">
+    <div className={`flex flex-col md:flex-row mt-12 md:mt-16 gap-4 ${active != index && "hidden"}`}>
+      <div className="flex-1 space-y-4 flex flex-col justify-center items-start">
         <h1 className="text-2xl md:text-4xl font-bold text-neutral">{card}</h1>
         <p className="text-gray-400  max-w-[700px]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
