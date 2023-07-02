@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const CountInView = ({ start, end, duration }) => {
-  const [ref, inView] = useInView({ triggerOnce: true });
+  const [ref, inView] = useInView({ triggerOnce: false });
   return (
     <div ref={ref}>
       {inView ? (
