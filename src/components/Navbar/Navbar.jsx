@@ -78,7 +78,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <span className="">
+          <span className="" onClick={() => window.my_modal_2.showModal()}>
             <ButtonPrimary>Free Register</ButtonPrimary>
           </span>
         </div>
@@ -101,7 +101,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <span className="hidden md:inline-block">
+        <span className="hidden md:inline-block" onClick={() => window.my_modal_2.showModal()}>
           <ButtonPrimary>Free Register</ButtonPrimary>
         </span>
       </div>
