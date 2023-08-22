@@ -1,7 +1,7 @@
-import OurWorkingProcess from '@/components/OurWorkingProcess/OurWorkingProcess';
-import PageBanner from '@/components/PageBanner/PageBanner';
-import ServiceCard from '@/components/ServiceCard/ServiceCard';
-import Subscribe from '@/components/Subscribe/Subscribe';
+import OurWorkingProcess from '@/components/shared/OurWorkingProcess/OurWorkingProcess';
+import PageBanner from '@/components/shared/PageBanner/PageBanner';
+import ServiceCard from '@/components/singleComponents/ServiceCard/ServiceCard';
+import Subscribe from '@/components/shared/Subscribe/Subscribe';
 import React from 'react';
 import { FaDatabase, FaCogs, FaCubes, FaDollarSign, FaHandshake, FaRegChartBar } from "react-icons/fa";
 

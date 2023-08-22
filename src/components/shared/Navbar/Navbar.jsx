@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import bannerImg from "@/assests/syncro-logo.png";
-import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
+import ButtonPrimary from "../../singleComponents/ButtonPrimary/ButtonPrimary";
 import NavLink from "./NavLink";
 import { FaTimes, FaBars } from "react-icons/fa";
 

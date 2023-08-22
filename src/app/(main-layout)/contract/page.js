@@ -1,9 +1,9 @@
-import PageBanner from '@/components/PageBanner/PageBanner';
+import PageBanner from '@/components/shared/PageBanner/PageBanner';
 import Image from 'next/image';
 import React from 'react';
 import { BsFillGeoAltFill, BsFillEnvelopeFill, BsTelephoneFill } from "react-icons/bs";
 import contractImg from "@/assests/contact.png"
-import Subscribe from '@/components/Subscribe/Subscribe';
+import Subscribe from '@/components/shared/Subscribe/Subscribe';
 
 const page = () => {
     return (

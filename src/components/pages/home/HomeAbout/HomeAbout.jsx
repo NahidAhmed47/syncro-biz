@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import aboutImg from '@/assests/about.png'
 import { BsCheck2Square } from "react-icons/bs";
-import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
+import ButtonPrimary from '../../../singleComponents/ButtonPrimary/ButtonPrimary';
 
 
 const HomeAbout = () => {

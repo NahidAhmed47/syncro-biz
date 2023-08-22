@@ -1,11 +1,10 @@
-import CounterBg from '@/components/CounterBg/CounterBg';
-import DataAccordianHome from '@/components/DataAccordianHome/DataAccordianHome';
-import HomeAbout from '@/components/HomeAbout/HomeAbout';
-import HomeBanner from '@/components/HomeBanner/HomeBanner';
-import HomeService from '@/components/HomeService/HomeService';
-import OurWorkingProcess from '@/components/OurWorkingProcess/OurWorkingProcess';
-import RegisterModal from '@/components/RegisterModal/RegisterModal';
-import Subscribe from '@/components/Subscribe/Subscribe';
+import CounterBg from '@/components/shared/CounterBg/CounterBg';
+import DataAccordianHome from '@/components/pages/home/DataAccordianHome/DataAccordianHome';
+import HomeAbout from '@/components/pages/home/HomeAbout/HomeAbout';
+import HomeBanner from '@/components/pages/home/HomeBanner/HomeBanner';
+import HomeService from '@/components/pages/home/HomeService/HomeService';
+import OurWorkingProcess from '@/components/shared/OurWorkingProcess/OurWorkingProcess';
+import Subscribe from '@/components/shared/Subscribe/Subscribe';
 import WorkingProcessSection from '@/components/WorkingProcessSection/WorkingProcessSection';
 import React from 'react';
 
@@ -20,7 +19,6 @@ const page = () => {
             <WorkingProcessSection></WorkingProcessSection>
             <HomeAbout></HomeAbout>
             <Subscribe></Subscribe>
-            <RegisterModal></RegisterModal>
         </div>
     );
 };

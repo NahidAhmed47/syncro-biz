@@ -1,6 +1,6 @@
 import React from "react";
 import { BsCheck2All } from "react-icons/bs";
-import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
+import ButtonPrimary from "../../../singleComponents/ButtonPrimary/ButtonPrimary";
 import Image from "next/image";
 import img from "@/assests/tab-solution.png";
 

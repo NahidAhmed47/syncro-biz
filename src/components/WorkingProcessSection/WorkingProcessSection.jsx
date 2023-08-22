@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeader from '../SectionHeader/SectionHeader';
+import SectionHeader from '../shared/SectionHeader/SectionHeader';
 import Image from 'next/image';
 import img1 from '@/assests/process-work/1.png'
 import img2 from '@/assests/process-work/2.png'

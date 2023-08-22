@@ -1,6 +1,6 @@
 import React from "react";
-import SectionHeader from "../SectionHeader/SectionHeader";
-import ServiceCard from "../ServiceCard/ServiceCard";
+import SectionHeader from "../../../shared/SectionHeader/SectionHeader";
+import ServiceCard from "../../../singleComponents/ServiceCard/ServiceCard";
 import { FaDatabase, FaCogs, FaCubes, FaDollarSign, FaHandshake, FaRegChartBar } from "react-icons/fa";
 
 

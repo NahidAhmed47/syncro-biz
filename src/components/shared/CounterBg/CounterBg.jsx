@@ -1,13 +1,12 @@
 import React from "react";
-import counterImg from "../../assests/counter-bg.jpg";
 import Image from "next/image";
-import CountInView from "../CountInView/CountInView";
+import CountInView from "@/components/singleComponents/CountInView/CountInView";
 
 const CounterBg = () => {
   return (
     <div className="h-[300px] w-full relative">
       <div className="absolute top-0 h-full w-full ">
-        <Image src={counterImg} fill={true} alt="counter-bg"></Image>
+        <Image src={"https://i.ibb.co/Jyr1Ln2/counter-bg.jpg"} fill={true} alt="counter-bg"></Image>
       </div>
       <div className="w-full absolute h-full bg-primary z-20 bg-opacity-75  flex justify-center items-center">
         <div className="section-container w-full h-full grid grid-cols-2 lg:grid-cols-4 items-center">

@@ -1,5 +1,6 @@
-import Footer from '@/components/Footer/Footer';
-import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/shared/Footer/Footer';
+import Navbar from '@/components/shared/Navbar/Navbar';
+import RegisterModal from '@/components/RegisterModal/RegisterModal';
 import React from 'react';
 
 const layout = ({children}) => {
@@ -8,6 +9,7 @@ const layout = ({children}) => {
             <Navbar></Navbar>
             {children}
             <Footer></Footer>
+            <RegisterModal></RegisterModal>
         </div>
     );
 };

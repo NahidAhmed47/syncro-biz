@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaEnvelopeOpen, FaSearchLocation, FaPhoneAlt } from "react-icons/fa";
-import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
+import ButtonPrimary from '../../singleComponents/ButtonPrimary/ButtonPrimary';
 
 const Footer = () => {
     return (

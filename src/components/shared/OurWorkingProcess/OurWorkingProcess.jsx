@@ -1,5 +1,5 @@
 import React from "react";
-import OurWorkingProCard from "../OurWorkingProCard/OurWorkingProCard";
+import OurWorkingProCard from "../../pages/home/OurWorkingProCard/OurWorkingProCard";
 import Image from "next/image";
 import img from "@/assests/software.png"
 

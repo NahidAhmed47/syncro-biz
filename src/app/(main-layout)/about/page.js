@@ -1,7 +1,7 @@
-import CounterBg from '@/components/CounterBg/CounterBg';
-import HomeAbout from '@/components/HomeAbout/HomeAbout';
-import PageBanner from '@/components/PageBanner/PageBanner';
-import Subscribe from '@/components/Subscribe/Subscribe';
+import CounterBg from '@/components/shared/CounterBg/CounterBg';
+import HomeAbout from '@/components/pages/home/HomeAbout/HomeAbout';
+import PageBanner from '@/components/shared/PageBanner/PageBanner';
+import Subscribe from '@/components/shared/Subscribe/Subscribe';
 import React from 'react';
 
 const page = () => {

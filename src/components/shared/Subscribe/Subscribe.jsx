@@ -1,7 +1,7 @@
 import React from 'react';
 import subscribeImg from '@/assests/subscribe.png'
 import Image from 'next/image';
-import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
+import ButtonPrimary from '../../singleComponents/ButtonPrimary/ButtonPrimary';
 
 const Subscribe = () => {
     return (

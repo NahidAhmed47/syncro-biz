@@ -1,6 +1,6 @@
 import './globals.css'
 import { Dosis } from 'next/font/google'
- 
+
 const dosis = Dosis({
   weight: ['400', '500', '700', '800'],
   subsets: ['latin'],
@@ -16,9 +16,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
       <head>
-        <link rel='icon' href='/favicon.ico' sizes='any'/>
+        <link rel='icon' href='/favicon.ico' sizes='any' />
       </head>
-      <body className={dosis.className}>{children}</body>
+      <body className={dosis.className}>{children}
+      </body>
     </html>
   )
 }
