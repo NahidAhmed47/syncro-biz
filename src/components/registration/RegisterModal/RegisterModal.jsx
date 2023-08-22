@@ -12,7 +12,7 @@ const RegisterModal = () => {
         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
           ✕
         </button>
-        <h3 className="font-semibold text-lg text-primary">
+        <h3 className="font-medium text-lg lg:text-xl text-primary">
           Welcome! Please give the following information.{" "}
         </h3>
         <div className="mt-3 space-y-2 lg:space-y-2.5">
