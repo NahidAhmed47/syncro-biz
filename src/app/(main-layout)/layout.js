@@ -1,6 +1,6 @@
 import Footer from '@/components/shared/Footer/Footer';
 import Navbar from '@/components/shared/Navbar/Navbar';
-import RegisterModal from '@/components/RegisterModal/RegisterModal';
+import RegisterModal from '@/components/registration/RegisterModal/RegisterModal';
 import React from 'react';
 
 const layout = ({children}) => {
