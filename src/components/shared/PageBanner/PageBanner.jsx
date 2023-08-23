@@ -13,7 +13,6 @@ const PageBanner = ({title, route1, route2}) => {
                 </div>
             </div>
         </div>
-      this is page banner
     </div>
   );
 };

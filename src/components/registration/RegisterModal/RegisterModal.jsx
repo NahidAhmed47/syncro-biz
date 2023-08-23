@@ -37,13 +37,12 @@ const RegisterModal = () => {
                 Type of Business <span className="text-red-500">*</span>
               </label>
               <select
-                type="text"
                 className="form-input "
-                placeholder="Type your business name here"
               >
-                <option value="1">Select</option>
-                <option value="2">Select</option>
-                <option value="3">Select</option>
+                <option value="1" disabled>Select</option>
+                <option value="2">Wholesale</option>
+                <option value="3">Small Company</option>
+                <option value="3">Retailer</option>
               </select>
             </div>
             <div>
@@ -56,7 +55,7 @@ const RegisterModal = () => {
               <input
                 type="text"
                 className="form-input"
-                placeholder="Type your business name here"
+                placeholder="EIN4549"
               ></input>
             </div>
           </div>
@@ -71,7 +70,7 @@ const RegisterModal = () => {
               <input
                 type="text"
                 className="form-input"
-                placeholder="Type your business name here"
+                placeholder="10-15"
               ></input>
             </div>
             <div>
@@ -84,7 +83,7 @@ const RegisterModal = () => {
               <input
                 type="text"
                 className="form-input"
-                placeholder="Type your business name here"
+                placeholder="150,000 USD"
               ></input>
             </div>
           </div>
@@ -117,7 +116,7 @@ const RegisterModal = () => {
               Owner Email <span className="text-red-500">*</span>
             </label>
             <input
-              type="text"
+              type="email"
               className="form-input"
               placeholder="Email"
             ></input>
