@@ -1,14 +1,12 @@
 import ButtonPrimary from "@/components/singleComponents/ButtonPrimary/ButtonPrimary";
 import FormHeader from "@/components/singleComponents/formHeader/FormHeader";
 import React from "react";
+import LoginModalBtn from "../loginModalBtn/LoginModalBtn";
 
 const RegisterModal = () => {
   return (
     <dialog id="my_modal_2" className="modal">
-      <form
-        method="dialog"
-        className="modal-box bg-white rounded-md min-h-fit"
-      >
+      <form method="dialog" className="modal-box bg-white rounded-md min-h-fit">
         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
           ✕
         </button>
@@ -137,8 +135,9 @@ const RegisterModal = () => {
               placeholder="City name, Country"
             ></input>
           </div>
+          <LoginModalBtn></LoginModalBtn>
         </div>
-        <div className="w-full flex justify-center h-full mt-4 md:mt-7 items-end">
+        <div className="w-full flex justify-center h-full mt-4 md:mt-5 items-end">
           <ButtonPrimary>Submit</ButtonPrimary>
         </div>
       </form>
