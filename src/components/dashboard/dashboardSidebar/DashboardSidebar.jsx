@@ -1,6 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import NavLink from "@/components/shared/Navbar/NavLink";
+import bannerImg from "@/assests/syncro-logo.png";
+import Link from "next/link";
+import relationalRoute from "@/routes-data/relationalRoute";
 
 const sidebarRoute = [
     {
@@ -18,17 +20,12 @@ const sidebarRoute = [
 const DashboardSidebar = () => {
   return (
     <div className="font-berlin relative h-full">
-      <div className="pt-5">
-        <Link href={"/dashboard"}>
-          <Image
-            width={140}
-            height={51}
-            src="https://i.ibb.co/kxxsFW7/home-modified-3.png"
-            alt="magic orb logo"
-            className="mx-auto"
-          />
-        </Link>
-      </div>
+      <div className="w-full flex justify-center gap-2 items-center pt-4 ">
+          <Image src={bannerImg} alt="logo" fill={false}></Image>
+          <h1 className="text-2xl font-extrabold text-white">
+            Syncro<span className="text-primary">Biz</span>
+          </h1>
+        </div>
       <div className="mt-8 flex flex-col gap-y-3 2xl:gap-y-[30px]">
         {sidebarRoute.map((singleRoute) => (
           <NavLink
@@ -53,7 +50,7 @@ const DashboardSidebar = () => {
       </div>
       <hr className="my-4 mx-3 border-2 border-[#00000075]" />
       <div className="mt-4 ml-8">
-        {/* <ul className="list-disc list-white mt-2">
+        <ul className="list-disc list-white mt-2">
           {relationalRoute.map((singleRoute) => (
             <li
               key={singleRoute.id}
@@ -61,7 +58,7 @@ const DashboardSidebar = () => {
               <Link href={singleRoute.href}>{singleRoute.routeName}</Link>
             </li>
           ))}
-        </ul> */}
+        </ul>
       </div>
       <p className="text-center w-full pt-2 text-white text-base sm:text-lg inline-block absolute bottom-1 2xl:bottom-3">
         @SyncroBiz

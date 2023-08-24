@@ -16,13 +16,14 @@ const DashboardLayout = ({children}) => {
     }
   }, [currentPath]);
   return (
-    <div className="flex relative  min-h-screen lg:h-screen lg:w-screen ">
+    <div className="flex relative  min-h-screen lg:h-screen  ">
       {/* mobile side drawer */}
       <div className="overflow-hidden h-fit w-fit xl:hidden">
         <div
-          className={`h-screen overflow-y-scroll xl:hidden bg-gradient-to-b from-[#00b0ee] to-[#3e57d0] fixed top-0 left-0 ${
+          className={`h-screen overflow-y-scroll xl:hidden fixed top-0 left-0 ${
             sidebarOpen ? "" : "-translate-x-[100%]"
-          } w-[220px] z-50 duration-500`}>
+          } w-[220px] z-50 duration-500`} style={{background:
+            "linear-gradient(to bottom, #4b43c5, #385bd5, #2270e2, #0c84ec, #1397f3)",}}>
           <DashboardSidebar></DashboardSidebar>
         </div>
         {sidebarOpen && (
@@ -32,12 +33,13 @@ const DashboardLayout = ({children}) => {
         )}
       </div>
       {/* desktop sidebar */}
-      <div className="hidden xl:inline-block w-[220px] border-r-2 border-white h-full bg-gradient-to-b from-[#00b0ee] to-[#3e57d0]">
+      <div className="hidden xl:inline-block w-[220px] border-r-2 border-white h-full " style={{background:
+          "linear-gradient(to bottom, #4b43c5, #385bd5, #2270e2, #0c84ec, #1397f3)",}}>
         <DashboardSidebar></DashboardSidebar>
       </div>
-      <div className="w-full h-full  overflow-hidden relative">
+      <div className="w-full h-full overflow-hidden relative">
         <DashboardNavbar toggleSidebar={toggleSidebar}></DashboardNavbar>
-        <div className="lg:p-[20px] w-full min-h-screen  lg:min-h-[calc(100vh-49px)] bg-gradient-to-b from-[#00b0ee] to-[#3e57d0]">
+        <div className="lg:p-[20px] w-full min-h-screen  lg:min-h-[calc(100vh-49px)] " >
           {children}
         </div>
       </div>
