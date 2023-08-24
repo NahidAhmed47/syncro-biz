@@ -1,5 +1,6 @@
 import ButtonPrimary from "@/components/singleComponents/ButtonPrimary/ButtonPrimary";
 import React from "react";
+import RegisterModalBtn from "../registerModalBtn.jsx/RegisterModalBtn";
 
 const LoginModal = () => {
   return (
@@ -41,6 +42,7 @@ const LoginModal = () => {
               placeholder="8540956"
             ></input>
           </div>
+          <RegisterModalBtn></RegisterModalBtn>
         </div>
         <div className="w-full flex justify-center h-full mt-4 md:mt-5 items-end">
           <ButtonPrimary>LogIn</ButtonPrimary>
