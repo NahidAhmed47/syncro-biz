@@ -1,5 +1,6 @@
+import AuthProviders from '@/providers/authProviders/authProviders';
 import './globals.css'
-import { Dosis } from 'next/font/google'
+import { Dosis } from 'next/font/google';
 
 const dosis = Dosis({
   weight: ['400', '500', '700', '800'],
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel='icon' href='/favicon.ico' sizes='any' />
       </head>
-      <body className={dosis.className}>{children}
+      <body className={dosis.className}><AuthProviders>{children}</AuthProviders>
       </body>
     </html>
   )

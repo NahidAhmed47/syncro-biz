@@ -3,7 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { users } from "../../../../../helpers";
 
 
-const authOptions = {
+export const authOptions = {
     providers: [
         CredentialsProvider({
             name: "creds",
@@ -20,10 +20,10 @@ const authOptions = {
                     return user;
                 }
                 return null;
-
             }
         })
-    ]
+    ],
+    secret: process.env.NEXTAUTH_SECRET,
 };
 const handler = NextAuth(authOptions);
 

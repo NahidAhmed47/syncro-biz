@@ -4,7 +4,7 @@ import PageBanner from '@/components/shared/PageBanner/PageBanner';
 import Subscribe from '@/components/shared/Subscribe/Subscribe';
 import React from 'react';
 
-const page = () => {
+const AboutPage = () => {
     return (
         <div>
             <PageBanner title="About Us" route1="Home" route2="About"></PageBanner>
@@ -15,4 +15,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default AboutPage;
