@@ -33,7 +33,7 @@ const DashboardLayout = ({children}) => {
         )}
       </div>
       {/* desktop sidebar */}
-      <div className="hidden xl:inline-block w-[220px] border-r-2 border-white h-full " style={{background:
+      <div className="hidden xl:inline-block w-fit border-r-2 border-primary h-full " style={{background:
           "linear-gradient(to bottom, #4b43c5, #385bd5, #2270e2, #0c84ec, #1397f3)",}}>
         <DashboardSidebar></DashboardSidebar>
       </div>
