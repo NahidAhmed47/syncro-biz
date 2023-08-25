@@ -1,6 +1,7 @@
 import AuthProviders from '@/providers/authProviders/authProviders';
 import './globals.css'
 import { Dosis } from 'next/font/google';
+import { Toaster } from 'react-hot-toast';
 
 const dosis = Dosis({
   weight: ['400', '500', '700', '800'],
@@ -19,7 +20,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel='icon' href='/favicon.ico' sizes='any' />
       </head>
-      <body className={dosis.className}><AuthProviders>{children}</AuthProviders>
+      <body className={dosis.className}><AuthProviders>{children} <Toaster></Toaster></AuthProviders>
       </body>
     </html>
   )

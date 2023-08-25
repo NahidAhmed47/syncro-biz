@@ -38,6 +38,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const user = false;
   return (
     <div
       className={`w-full z-50 2xl:px-0 px-5 lg:px-7 ${
@@ -51,19 +52,18 @@ const Navbar = () => {
         <div className="md:hidden">
           <FaBars
             onClick={() => setIsOpenMenu(!isOpenMenu)}
-            className={`w-6 h-6 text-gray-300  ${
-              isOpenMenu && "hidden"
-            }`}
+            className={`w-6 h-6 text-gray-300  ${isOpenMenu && "hidden"}`}
           ></FaBars>
-          
         </div>
         {/* mobile responsive menu here */}
-        <div className={`md:hidden absolute -top-5 -left-5 h-[100vh] p-7 z-[100] bg-black ${isOpenMenu ? 'md:hidden translate-x-0 duration-500' : '-left-[100%]'}`}>
-        <FaTimes
+        <div
+          className={`md:hidden absolute -top-5 -left-5 h-[100vh] p-7 z-[100] bg-black ${
+            isOpenMenu ? "md:hidden translate-x-0 duration-500" : "-left-[100%]"
+          }`}
+        >
+          <FaTimes
             onClick={() => setIsOpenMenu(!isOpenMenu)}
-            className={`w-6 h-6 text-gray-300  ${
-              isOpenMenu || "hidden"
-            }`}
+            className={`w-6 h-6 text-gray-300  ${isOpenMenu || "hidden"}`}
           ></FaTimes>
           <ul className="text-lg space-y-3 md:space-x-auto text-white font-medium mb-5 mt-10">
             {navLinks.map(({ path, title }) => (
@@ -101,9 +101,16 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <span className="hidden md:inline-block" onClick={() => window.my_modal_2.showModal()}>
-          <ButtonPrimary>Free Register</ButtonPrimary>
-        </span>
+        {user ? (
+          <ButtonPrimary>Logout</ButtonPrimary>
+        ) : (
+          <span
+            className="hidden md:inline-block"
+            onClick={() => window.my_modal_2.showModal()}
+          >
+            <ButtonPrimary>Free Register</ButtonPrimary>
+          </span>
+        )}
       </div>
     </div>
   );

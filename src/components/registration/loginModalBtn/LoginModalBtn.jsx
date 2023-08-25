@@ -6,7 +6,7 @@ const LoginModalBtn = () => {
     <div className="text-sm">
       If you want manage exist business, please{" "}
       <button
-        onClick={() => window.login_modal.showModal()}
+        onClick={() => {window.login_modal.showModal(), window.my_modal_2.close()}}
         className="text-red-500 underline"
       >
         Login

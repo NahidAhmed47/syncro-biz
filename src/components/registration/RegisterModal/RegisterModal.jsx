@@ -1,13 +1,53 @@
+"use client";
 import ButtonPrimary from "@/components/singleComponents/ButtonPrimary/ButtonPrimary";
 import FormHeader from "@/components/singleComponents/formHeader/FormHeader";
 import React from "react";
 import LoginModalBtn from "../loginModalBtn/LoginModalBtn";
+import toast from "react-hot-toast";
 
 const RegisterModal = () => {
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+    console.log(data);
+    if (
+      !data.businessName &&
+      !data.employee &&
+      !data.profit & !data.firstName &&
+      !data.email &&
+      !data.ein &&
+      !data.lastName &&
+      !data.address
+    ) {
+      form.reset();
+      return;
+    } else if (
+      !data.businessName ||
+      !data.employee ||
+      !data.profit ||
+      !data.firstName ||
+      !data.email ||
+      !data.businessType
+    ) {
+      toast.error("Required field is missing!");
+      return;
+    }
+    form.reset();
+  };
   return (
     <dialog id="my_modal_2" className="modal">
-      <form method="dialog" className="modal-box bg-white rounded-md min-h-fit">
-        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+      <form
+        method="dialog"
+        onSubmit={handleFormSubmit}
+        className="modal-box bg-white rounded-md min-h-fit"
+      >
+        <button
+          onClick={() => window.my_modal_2.close()}
+          name="close"
+          className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+        >
           ✕
         </button>
         <h3 className="font-medium text-lg lg:text-xl text-primary">
@@ -25,6 +65,7 @@ const RegisterModal = () => {
             <input
               type="text"
               className="form-input"
+              name="businessName"
               placeholder="Type your business name here"
             ></input>
           </div>
@@ -36,13 +77,13 @@ const RegisterModal = () => {
               >
                 Type of Business <span className="text-red-500">*</span>
               </label>
-              <select
-                className="form-input "
-              >
-                <option value="1" disabled>Select</option>
-                <option value="2">Wholesale</option>
-                <option value="3">Small Company</option>
-                <option value="3">Retailer</option>
+              <select className="form-input " name="businessType">
+                <option value="" disabled>
+                  Select
+                </option>
+                <option value="wholesale">Wholesale</option>
+                <option value="Small Company">Small Company</option>
+                <option value="Retailer">Retailer</option>
               </select>
             </div>
             <div>
@@ -55,7 +96,8 @@ const RegisterModal = () => {
               <input
                 type="text"
                 className="form-input"
-                placeholder="EIN4549"
+                name="ein"
+                placeholder="EIN-4549"
               ></input>
             </div>
           </div>
@@ -70,6 +112,7 @@ const RegisterModal = () => {
               <input
                 type="text"
                 className="form-input"
+                name="employee"
                 placeholder="10-15"
               ></input>
             </div>
@@ -83,6 +126,7 @@ const RegisterModal = () => {
               <input
                 type="text"
                 className="form-input"
+                name="profit"
                 placeholder="150,000 USD"
               ></input>
             </div>
@@ -99,27 +143,46 @@ const RegisterModal = () => {
               <input
                 type="text"
                 className="form-input"
+                name="firstName"
                 placeholder="First Name"
               ></input>
               <input
                 type="text"
                 className="form-input"
+                name="lastName"
                 placeholder="Last Name"
               ></input>
             </div>
           </div>
-          <div>
-            <label
-              className="text-base lg:text-lg lg:font-medium text-neutral"
-              htmlFor="name"
-            >
-              Owner Email <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="email"
-              className="form-input"
-              placeholder="Email"
-            ></input>
+          <div className="w-full h-fit gap-2 grid md:grid-cols-2">
+            <div>
+              <label
+                className="text-base lg:text-lg lg:font-medium text-neutral"
+                htmlFor="name"
+              >
+                Email <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                className="form-input"
+                name="email"
+                placeholder="Enter Email"
+              ></input>
+            </div>
+            <div>
+              <label
+                className="text-base lg:text-lg lg:font-medium text-neutral"
+                htmlFor="name"
+              >
+                Set PIN <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="password"
+                className="form-input"
+                name="pin"
+                placeholder="*****"
+              ></input>
+            </div>
           </div>
           <div>
             <label
@@ -131,6 +194,7 @@ const RegisterModal = () => {
             <input
               type="text"
               className="form-input"
+              name="address"
               placeholder="City name, Country"
             ></input>
           </div>
