@@ -6,7 +6,7 @@ import LoginModalBtn from "../loginModalBtn/LoginModalBtn";
 import toast from "react-hot-toast";
 
 const RegisterModal = () => {
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async(e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
@@ -34,7 +34,24 @@ const RegisterModal = () => {
       toast.error("Required field is missing!");
       return;
     }
-    form.reset();
+    try {
+      const res = await fetch('api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({data}),
+      })
+      if(res.ok){
+        toast.success('Registration Successful')
+        // form.reset();
+        window.my_modal_2.close();
+      }else{
+        toast.error('Business Registration Failed!')
+      }
+    } catch (error) {
+      console.log(error)
+    }
   };
   return (
     <dialog id="my_modal_2" className="modal">
