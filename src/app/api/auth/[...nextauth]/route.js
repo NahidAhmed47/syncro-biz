@@ -1,30 +1,42 @@
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { users } from "../../../../../helpers";
+import { connectDB } from "../../../../../database/mongodb";
+import User from "../../../../../models/user";
 
 
 export const authOptions = {
     providers: [
         CredentialsProvider({
-            name: "creds",
+            name: "credentials",
             credentials: {
-                email: { label: "Email", type: "email", placeholder: "Enter email" },
-                password: { label: "Password", type: "password", placeholder: "Enter password" }
             },
-            async authorize(credentials, req){
-                if(!credentials.email || !credentials.password || !credentials.email ){
-                    return null;
-                }
-                const user = users.find(user => user.email === credentials.email);
-                if(user?.password === credentials.password){
+            async authorize(credentials) {
+                const {email, pin} = credentials;
+                try {
+                    await connectDB();
+                    const user = await User.findOne({email});
+                    if(!user){
+                        return null;
+                    }
+                    if(user.pin !== pin){
+                        return null;
+                    }
                     return user;
+                } catch (error) {
+                    console.log(error)
                 }
-                return null;
             }
         })
     ],
+    session: {
+        strategy: "jwt",
+    },
     secret: process.env.NEXTAUTH_SECRET,
+    pages: {
+        signIn: "/",
+    }
 };
 const handler = NextAuth(authOptions);
 
-export { handler as GET, handler as POST};
+export { handler as GET, handler as POST };
