@@ -1,6 +1,5 @@
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { users } from "../../../../../helpers";
 import { connectDB } from "../../../../../database/mongodb";
 import User from "../../../../../models/user";
 
