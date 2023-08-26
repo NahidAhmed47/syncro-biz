@@ -3,7 +3,6 @@ import mongoose, { Schema, models } from 'mongoose';
 const userSchema = new Schema({
     email: {
         type: String,
-        unique: true, // no two users can have the same email
         required: true,
     },
     businessName: {

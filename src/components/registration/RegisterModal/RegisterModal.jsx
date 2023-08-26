@@ -11,7 +11,6 @@ const RegisterModal = () => {
     const form = e.target;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
-    console.log(data);
     if (
       !data.businessName &&
       !data.employee &&
@@ -35,19 +34,33 @@ const RegisterModal = () => {
       return;
     }
     try {
-      const res = await fetch('api/register', {
-        method: 'POST',
+      const resUserIsExist = await fetch('api/userExist', {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({data}),
+        body: JSON.stringify(data.email),
       })
-      if(res.ok){
-        toast.success('Registration Successful')
-        // form.reset();
-        window.my_modal_2.close();
-      }else{
-        toast.error('Business Registration Failed!')
+      const {user} = await resUserIsExist.json();
+      if(user){
+        toast.error('User already exist!')
+        return;
+      }
+      else{
+        const res = await fetch('api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({data}),
+        })
+        if(res.ok){
+          toast.success('Registration Successful')
+          // form.reset();
+          window.my_modal_2.close();
+        }else{
+          toast.error('Business Registration Failed!')
+        }
       }
     } catch (error) {
       console.log(error)
