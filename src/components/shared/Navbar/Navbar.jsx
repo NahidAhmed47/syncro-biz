@@ -5,7 +5,7 @@ import bannerImg from "@/assests/syncro-logo.png";
 import ButtonPrimary from "../../singleComponents/ButtonPrimary/ButtonPrimary";
 import NavLink from "./NavLink";
 import { FaTimes, FaBars } from "react-icons/fa";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
 const navLinks = [
   {
@@ -15,10 +15,6 @@ const navLinks = [
   {
     path: "/services",
     title: "Services",
-  },
-  {
-    path: "/dashboard",
-    title: "Dashboard",
   },
   {
     path: "/contract",
@@ -33,7 +29,7 @@ const navLinks = [
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const {data: session} = useSession();
+  const { data: session } = useSession();
   const handleScroll = () => {
     setScrollY(window.scrollY);
   };
@@ -106,9 +102,21 @@ const Navbar = () => {
               </NavLink>
             </li>
           ))}
+          {session && (
+            <li>
+              <NavLink
+                activeClassName="text-primary font-semibold"
+                href="/dashboard"
+              >
+                Dashboard
+              </NavLink>
+            </li>
+          )}
         </ul>
         {session ? (
-          <ButtonPrimary>Logout</ButtonPrimary>
+          <span onClick={() => signOut()}>
+            <ButtonPrimary>Logout</ButtonPrimary>
+          </span>
         ) : (
           <span
             className="hidden md:inline-block"
