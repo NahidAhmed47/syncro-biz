@@ -4,8 +4,10 @@ import FormHeader from "@/components/singleComponents/formHeader/FormHeader";
 import React from "react";
 import LoginModalBtn from "../loginModalBtn/LoginModalBtn";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const RegisterModal = () => {
+  const router = useRouter();
   const handleFormSubmit = async(e) => {
     e.preventDefault();
     const form = e.target;
@@ -56,8 +58,9 @@ const RegisterModal = () => {
         })
         if(res.ok){
           toast.success('Registration Successful')
-          // form.reset();
+          form.reset();
           window.my_modal_2.close();
+          router.push('/dashboard')
         }else{
           toast.error('Business Registration Failed!')
         }
