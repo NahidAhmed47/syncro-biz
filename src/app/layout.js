@@ -2,6 +2,8 @@ import AuthProviders from '@/providers/authProviders/authProviders';
 import './globals.css'
 import { Dosis } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
+import { Provider } from 'react-redux';
+import { store } from '@/redux/store';
 
 const dosis = Dosis({
   weight: ['400', '500', '700', '800'],
@@ -20,7 +22,13 @@ export default function RootLayout({ children }) {
       <head>
         <link rel='icon' href='/favicon.ico' sizes='any' />
       </head>
-      <body className={dosis.className}><AuthProviders>{children} <Toaster></Toaster></AuthProviders>
+      <body className={dosis.className}>
+        <Provider store={store}>
+          <AuthProviders>
+            {children}
+            <Toaster></Toaster>
+          </AuthProviders>
+        </Provider>
       </body>
     </html>
   )
