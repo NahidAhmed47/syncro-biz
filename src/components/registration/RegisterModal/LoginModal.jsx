@@ -49,7 +49,7 @@ const LoginModal = () => {
         method="dialog"
         className="modal-box bg-white rounded-md min-h-[20vh] h-fit"
       >
-        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+        <button onClick={()=> window.login_modal.close()} className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
           ✕
         </button>
         <h3 className="font-medium text-lg lg:text-xl text-primary">
@@ -78,7 +78,7 @@ const LoginModal = () => {
               Business Code (PIN) <span className="text-red-500">*</span>
             </label>
             <input
-              type="text"
+              type="password"
               className="form-input"
               placeholder="8540956"
               name="pin"

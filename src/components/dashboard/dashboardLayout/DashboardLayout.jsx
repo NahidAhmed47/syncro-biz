@@ -16,7 +16,7 @@ const DashboardLayout = ({children}) => {
     }
   }, [currentPath]);
   return (
-    <div className="flex relative  min-h-screen lg:h-screen  ">
+    <div className="flex relative  min-h-screen lg:h-screen  bg-slate-100">
       {/* mobile side drawer */}
       <div className="overflow-hidden h-fit w-fit xl:hidden">
         <div
