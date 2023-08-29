@@ -39,6 +39,14 @@ const HomeDashboard = () => {
         {
             overviewCardsData.map((card, index) => <OverviewCard key={index} card={card}></OverviewCard>)
         }
+        <div className="w-full h-full border lg:row-start-1 lg:row-end-5 lg:col-start-4 lg:col-end-5 bg-white">
+
+        </div>
+        <div className="bg-white w-full h-full lg:row-start-2 lg:row-end-5 lg:col-start-1 lg:col-end-2">
+
+        </div>
+        <div className="bg-white w-full h-full lg:row-start-2 lg:row-end-5 lg:col-start-2 lg:col-end-4">
+        </div>
     </div>
   );
 };
