@@ -1,8 +1,8 @@
-import AuthProviders from '@/providers/authProviders/authProviders';
 import './globals.css'
 import { Dosis } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import ReduxProvider from '@/redux/reduxProvider/ReduxProvider';
+import AuthProviders from '@/providers/authProviders/AuthProviders';
 
 
 const dosis = Dosis({
